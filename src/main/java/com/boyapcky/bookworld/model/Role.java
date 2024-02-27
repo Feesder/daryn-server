@@ -1,0 +1,36 @@
+package com.boyapcky.bookworld.model;
+
+import com.boyapcky.bookworld.entity.RoleEntity;
+
+public class Role {
+    Long id;
+    String name;
+
+    public Role(Long id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    public static Role toModel(RoleEntity roleEntity) {
+        return new Role(
+                roleEntity.getId(),
+                roleEntity.getName()
+        );
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+}
